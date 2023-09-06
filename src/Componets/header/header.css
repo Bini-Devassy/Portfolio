@@ -1,0 +1,243 @@
+header{
+    height: 100vh;
+    padding: 7rem;
+    padding-top: 1rem;
+    overflow: hidden;
+}
+
+.header_container{
+    text-align: center;
+    height: 80%;
+    position: relative;
+}
+
+/*----------------------------------FOR CTA-------------------*/
+.cta {
+    margin: 2.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+
+/*----------------------Socials---------------*/
+
+.header_socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+    font-size: 1.5rem;
+}
+
+.header_socials::after{
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+   
+    
+}
+
+
+
+/*----------------------ME---------------*/
+.me{
+    background: linear-gradient( var(--color-primary), transparent);
+    width: 20rem;
+    height: 25rem;
+    position:absolute;
+    left: calc(50% - 11rem);
+    margin-top: 1rem;
+    overflow: hidden;
+    border-radius: 12rem 12rem 12rem 12rem;
+    padding: 5rem 1.5rem 1.5rem 1.5rem;   
+
+}
+
+/*----------------------SCROLL DOWN---------------*/
+.scroll_down {
+    position: absolute;
+    right: -2.5rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 200;
+    font-size: 0.9rem;
+}
+
+.scroll_down:hover {
+  transform: rotate(-20deg);
+
+}
+
+
+
+/*----------------------------------------------*/
+.container-pic {
+    max-width: 900px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+  }
+  
+  .card-wrapper {
+    width: 400px;
+    height: 500px;
+    position: relative;
+  }
+  
+  .card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    height: 450px;
+    transform: translate(-50%, -50%);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    transition: 0.5s;
+  } 
+    .card-image {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background-color: #000;
+      transition: .5s;
+    }
+    
+    &:hover img {
+      transition: .5s;
+    }
+  
+  
+  .card:hover .card-image {
+    transform: translateY(-100px);
+    transition: all .9s;
+  }
+  
+  /**** Social Icons *****/
+  
+  .social-icons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: flex;
+  }
+   
+  .social-icons li {
+      list-style: none;
+  }  
+      .social-icons a {
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        background: #fff;
+        font-size: 23px;
+        color: #333;
+        font-weight: bold;
+        margin: 0 6px;
+        transition: .4s;
+        transform: translateY(200px);
+        opacity: 0;
+      } 
+
+  .card:hover .social-icons li a {
+    transform: translateY(0px);
+    opacity: 1; 
+  }
+  
+  .social-icons li a:hover {
+    background: #000; 
+    transition: .2s;
+    .fab {
+      color: #fff;
+    } 
+  }
+  
+  .social-icons li a .fab {
+    transition: .8s;
+  }  
+  .social-icons :hover {
+        transform: rotateY(360deg);
+        color: #fff;
+    } 
+  
+  
+  .card:hover li:nth-child(1) a {
+      transition-delay: 0.1s;
+  }
+  .card:hover li:nth-child(2) a {
+    transition-delay: 0.2s;
+  }
+  .card:hover li:nth-child(3) a {
+    transition-delay: 0.3s;
+  }
+  .card:hover li:nth-child(4) a {
+    transition-delay: 0.4s;
+  }
+  
+
+ 
+
+  
+  .profile-two .social-icons li a {
+    border-radius: 50%;
+  }
+  
+  .card:hover .profile-img--two {
+    transform: rotateY(180deg);
+  }
+  
+  .card:hover .jane {
+    bottom: 0;
+    left: 0;
+    transition-delay: 0.5s;
+    opacity: 1;
+  }
+  
+
+
+
+
+
+
+
+
+
+/*-----------------------MEDIA QUERIES(MEDIUM DEVICES)--------------------------*/
+
+@media screen and (max-width: 1024px) {
+    
+      header{
+        height: 68vh;
+
+      }  
+    
+
+}
+
+/*-----------------------MEDIA QUERIES(small DEVICES)--------------------------*/
+
+@media screen and (max-width: 600px) {
+    header{
+        height: 100vh;
+       
+    }
+    .header_socials, .scroll_down {
+        display: none;
+    }
+ 
+}
